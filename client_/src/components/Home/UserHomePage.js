@@ -70,7 +70,7 @@ function UserHomePage(){
       }
     })
     .then( res => {
-      console.log(_res)
+      console.log(res)
       res.json()
       .then(_res => {
         let urlData = []
