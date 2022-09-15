@@ -72,6 +72,7 @@ function UserHomePage(){
     .then( res => {
       res.json()
       .then(_res => {
+        console.log(_res)
         let urlData = []
         console.log(_res)
         for(let i in _res.urls){
