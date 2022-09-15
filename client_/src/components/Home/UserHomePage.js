@@ -79,7 +79,7 @@ function UserHomePage(){
         }
         setUserUrlList(urlData)
       })
-    })
+    }).catch(err => console.log(err))
   }
   
   useEffect(()=>{
