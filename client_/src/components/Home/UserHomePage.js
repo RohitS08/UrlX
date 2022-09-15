@@ -65,6 +65,7 @@ function UserHomePage(){
   const fetchData = () => {
     fetch('/data',{
       method:"GET",
+      credentials: true,
       header:{
         "Content-type":"application/json"
       }
