@@ -17,6 +17,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cookies());
 
+app.use('/',router);
+
 if(process.env.NODE_ENV=="production"){
   app.use(express.static("client_/build"));
   const path = require('path');
@@ -24,7 +26,5 @@ if(process.env.NODE_ENV=="production"){
     res.sendFile(path.resolve(__dirname,'client_','build','index.html'))
   })
 }
-
-app.use('/',router);
 
 app.listen(PORT, () => console.log(`Server Running on Port : ${PORT}...`))
