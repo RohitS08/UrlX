@@ -45,6 +45,7 @@ router.post('/login', async (req,res)=>{
     return res.status(422).json({errMsg:'All Fields Required!'});
   
   let user= await USER.findOne({email})
+  console.log(user)
   if(!user)
     return res.status(400).json({errMsg:'Invalid Credentials!'});
   
